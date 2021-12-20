@@ -7,5 +7,5 @@ Keras
 Pillow
 opencv-python
 Flask-WTF
-tensorflow
+tensorflow-cpu
 scikit-learn
