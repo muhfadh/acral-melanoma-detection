@@ -1,7 +1,5 @@
 import time
 import os
-import cv2
-import numpy as np
 import cnn_svm, cnn_svm_2, cnn_svm_3
 from PIL import Image
 from flask import Flask, request, redirect, render_template, flash
