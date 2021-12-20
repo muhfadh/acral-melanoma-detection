@@ -1,11 +1,9 @@
 Flask
-h5py
 gunicorn
 numpy
-scipy
 Keras
 Pillow
-opencv-python
 Flask-WTF
 tensorflow-cpu
 scikit-learn
+Werkzeug
