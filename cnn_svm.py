@@ -11,10 +11,10 @@ import numpy as np
 from numpy import linalg as LA
 import os
 
-dir1 = ['static/image/training/acral melanoma/',
-        'static/image/testing/acral melanoma/',
-        'static/image/training/benign nevi/',
-        'static/image/testing/benign nevi/']
+dir1 = ['static/image/90-10/training/acral melanoma/',
+        'static/image/90-10/testing/acral melanoma/',
+        'static/image/90-10/training/benign nevi/',
+        'static/image/90-10/testing/benign nevi/']
 
 def get_imlist(path):
     return [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.jpg') or f.endswith('.jpeg') or f.endswith('.png')]

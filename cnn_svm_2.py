@@ -11,10 +11,10 @@ import numpy as np
 from numpy import linalg as LA
 import os
 
-dir1 = ['static/image/training/acral melanoma/',
-        'static/image/testing/acral melanoma/',
-        'static/image/training/benign nevi/',
-        'static/image/testing/benign nevi/']
+dir1 = ['static/image/80-20/training/acral melanoma/',
+        'static/image/80-20/testing/acral melanoma/',
+        'static/image/80-20/training/benign nevi/',
+        'static/image/80-20/testing/benign nevi/']
 
 def get_imlist(path):
     return [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.jpg') or f.endswith('.jpeg') or f.endswith('.png')]
@@ -48,10 +48,8 @@ class FeatureExtractor:
 
         flat = Flatten()(pool1)
         drop_out1 = Dropout(0.5)(flat)
-        hidden1 = Dense(2048,activation='relu', name='fc1')(drop_out1)
-        hidden2 = Dense(500,activation='relu', name='fc3')(hidden1)
 
-        self.model2 = Model(inputs=inputs, outputs=hidden2)
+        self.model2 = Model(inputs=inputs, outputs=drop_out1)
 
     def extract_features(self, img_path):
         im = Image.open(img_path)

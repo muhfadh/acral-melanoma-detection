@@ -5,5 +5,6 @@ Keras
 Pillow
 Flask-WTF
 tensorflow-cpu
+tensorflow
 scikit-learn
 Werkzeug
